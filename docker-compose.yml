@@ -1,0 +1,15 @@
+# @format
+
+version: '3'
+
+services:
+  converter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - pip-cache:/root/.cache/pip
+
+volumes:
+  pip-cache:
